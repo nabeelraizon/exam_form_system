@@ -1,0 +1,30 @@
+<div class="common-format">
+    <div class="page-wrapper mt-3 mb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title text-center">Login</h4>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label class="moving-label" for="email">Email</label>
+                                    <input [(ngModel)]="loginUserData.email" type="email" name="email" id="email" class="form-control" required />
+                                </div>
+                                <div class="form-group">
+                                    <label class="moving-label" for="password">Password</label>
+                                    <input [(ngModel)]="loginUserData.password" type="password" name="password" id="password" class="form-control" required />
+                                </div>
+                                <div class="text-right">
+                                    <button (click)="loginUser()" class="btn btn-success">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

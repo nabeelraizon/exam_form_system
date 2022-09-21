@@ -1,0 +1,210 @@
+<div class="common-format">
+    <div class="page-wrapper mt-3 mb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title text-center">Application Preview</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-right" id="photo">
+                               
+                            </div>
+                            <!-- <form action="" #studentRegData="ngForm" (ngSubmit)="studentRegistration()" novalidate> -->
+                                <h6 class="form-caption">Personal Information</h6>
+                                <hr>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="fname" class="required-item">First Name</label>
+                                        <p>{{studentData.fname}}</p>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="mname">Middle Name</label>
+                                        <p>{{studentData.mname}}</p>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="lname" class="required-item">Last Name</label>
+                                        <p>{{studentData.lname}}</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="fathersName" class="required-item">Father's Name</label>
+                                        <p>{{studentData.fathersName}}</p>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="mothersName" class="required-item">Mother's Name</label>
+                                        <p>{{studentData.mothersName}}</p>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="dob" class="required-item">Date Of Birth</label>
+                                        <p>{{studentData.dob}}</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="gender">Gender</label>
+                                        <p>{{studentData.gender}}</p>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="nationality" class="required-item">Nationality</label>
+                                        <p>{{studentData.nationality}}</p>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="caste" class="required-item">Caste</label>
+                                        <p>{{studentData.caste}}</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="address" class="required-item">Address</label>
+                                        <p>{{studentData.address}}</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="city" class="required-item">City</label>
+                                        <p>{{studentData.city}}</p>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="state" class="required-item">State</label>
+                                        <p>{{studentData.state}}</p>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="country" class="required-item">Country</label>
+                                        <p>{{studentData.country}}</p>
+                                    </div>
+                                </div>
+
+
+                                <h6 class="form-caption">Academic Information</h6>
+                                <hr>
+                                
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Examination</th>
+                                            <th>Board/University</th>
+                                            <th>Subject</th>
+                                            <th>Year</th>
+                                            <th>Percentage/Grade</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="">Senior Secondary</label>
+                                                    <p>{{studentData.ssExamination}}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <!-- <input #ssBoard="ngModel" [class.is-invalid]="ssBoard.invalid && ssBoard.touched" [(ngModel)]="studentRegData.ssBoard" type="text" name="ss-board" id="ss-board" level="ss" class="form-control" required/> -->
+                                                    <p>{{studentData.ssBoard}}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <!-- <input #ssSubject="ngModel" [class.is-invalid]="ssSubject.invalid && ssSubject.touched" [(ngModel)]="studentRegData.ssSubject" type="text" name="ss-subject" id="ss-subject" level="ss" class="form-control" required/> -->
+                                                    <p>{{studentData.ssSubject}}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <!-- <input #ssYear="ngModel" [class.is-invalid]="ssYear.invalid && ssYear.touched" [(ngModel)]="studentRegData.ssYear" type="text" name="ss-year" id="ss-year" level="ss" class="form-control" required/> -->
+                                                    <p>{{studentData.ssYear}}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <!-- <input #ssPercentage="ngModel" [class.is-invalid]="ssPercentage.invalid && ssPercentage.touched" [(ngModel)]="studentRegData.ssPercentage" type="text" name="ss-percentage" id="ss-percentage" level="ss" class="form-control" required/> -->
+                                                    <p>{{studentData.ssPercentage}}</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="">Higher Secondary</label>
+                                                    <!-- <input [(ngModel)]="studentRegData.hsExamination" type="text" name="hs-examination" id="hs-examination" class="form-control" level="hs" value="Higher Secondary" /> -->
+                                                    <p>{{studentData.hsExamination}}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <!-- <input #hsBoard="ngModel" [class.is-invalid]="hsBoard.invalid && hsBoard.touched" [(ngModel)]="studentRegData.hsBoard" type="text" name="hs-board" id="hs-board" level="hs" class="form-control" required/> -->
+                                                    <p>{{studentData.hsBoard}}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <!-- <input #hsSubject="ngModel" [class.is-invalid]="hsSubject.invalid && hsSubject.touched" [(ngModel)]="studentRegData.hsSubject" type="text" name="hs-subject" id="hs-subject" level="hs" class="form-control" required/> -->
+                                                    <p>{{studentData.hsSubject}}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <!-- <input #hsYear="ngModel" [class.is-invalid]="hsYear.invalid && hsYear.touched" [(ngModel)]="studentRegData.hsYear" type="text" name="hs-year" id="hs-year" level="hs" class="form-control" required/> -->
+                                                    <p>{{studentData.hsYear}}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <!-- <input #hsPercentage="ngModel" [class.is-invalid]="hsPercentage.invalid && hsPercentage.touched" [(ngModel)]="studentRegData.hsPercentage" type="text" name="hs-percentage" id="hs-percentage" level="hs" class="form-control" required/> -->
+                                                    <p>{{studentData.hsPercentage}}</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="applyFor" class="required-item">Apply For</label>
+                                        <p>{{studentData.applyFor}}</p>
+                                    </div>
+
+                                    <div class="form-group col-md-4">
+                                        <label for="stream" class="required-item">Stream</label>
+                                        <p>{{studentData.stream}}</p>
+                                    </div>
+
+                                    <div class="form-group col-md-4">
+                                        <label for="medium" class="required-item">Medium</label>
+                                        <p>{{studentData.medium}}</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="centerCity" class="required-item">Center City</label>
+                                        <p>{{studentData.centerCity}}</p>
+                                    </div>
+                                    <div class="form-group col-md-8">
+                                        <label for="centerName" class="required-item">Center Name</label>
+                                        <p>{{studentData.centerName}}</p>
+                                    </div>
+                                </div>
+                                <div class="text-right" id="signature">
+                                    
+                                </div>
+                                <div class="text-right">
+                                    <!-- <button type="submit" [disabled]="studentRegData.invalid" class="btn btn-info">Save</button>
+                                    <button (click)="nextPage()" class="btn btn-secondary ml-2">Next</button> -->
+                                    <button class="btn btn-primary" (click)="print()">Print</button>
+                                </div>
+
+                            <!-- </form> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                

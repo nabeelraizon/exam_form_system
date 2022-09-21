@@ -1,0 +1,42 @@
+[
+    {
+        "centerName": "DPS",
+        "centerAddress": "Delhi",
+        "centerIncharge": "Mr. Gill",
+        "inchargeContact": "9876543210",
+        "availableSeats": 60,
+        "totalSeats": 60
+    },
+    {
+        "centerName": "MPIS",
+        "centerAddress": "Indore",
+        "centerIncharge": "Mr. Dinesh",
+        "inchargeContact": "8765432109",
+        "availableSeats": 40,
+        "totalSeats": 40
+    },
+    {
+        "centerName": "CITS",
+        "centerAddress": "Chandigarh",
+        "centerIncharge": "Mr. Romil",
+        "inchargeContact": "7654321098",
+        "availableSeats": 80,
+        "totalSeats": 80
+    },
+    {
+        "centerName": "JITS",
+        "centerAddress": "Jaipur",
+        "centerIncharge": "Mr. Somesh",
+        "inchargeContact": "6543210987",
+        "availableSeats": 0,
+        "totalSeats": 40
+    },
+    {
+        "centerName": "MITS",
+        "centerAddress": "Mumbai",
+        "centerIncharge": "Mr. Roy",
+        "inchargeContact": "5432109876",
+        "availableSeats": 0,
+        "totalSeats": 60
+    }
+]

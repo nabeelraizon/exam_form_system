@@ -1,0 +1,289 @@
+<div class="common-format">
+    <div class="page-wrapper mt-3 mb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title text-center">Student Registration</h4>
+                        </div>
+                        <div class="card-body">
+                            
+                            <form action="" #studentRegForm="ngForm" (ngSubmit)="studentRegistration()" novalidate>
+                                <h6 class="form-caption">Personal Information</h6>
+                                <hr>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="fname" class="required-item">First Name</label>
+                                        <input #fname="ngModel" [(ngModel)]="studentRegData.fname" [class.is-invalid]="fname.invalid && fname.touched" type="text" name="fname" id="fname" class="form-control" required/>
+                                        <div [class.d-none]="fname.valid || fname.untouched" class="invalid-feedback">Please enter your first name</div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="mname">Middle Name</label>
+                                        <input #mname="ngModel" [(ngModel)]="studentRegData.mname" type="text" name="mname" id="mname" class="form-control" />
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="lname" class="required-item">Last Name</label>
+                                        <input #lname="ngModel" [class.is-invalid]="lname.invalid && lname.touched" [(ngModel)]="studentRegData.lname" type="text" name="lname" id="lname" class="form-control" required/>
+                                        <div [class.d-none]="lname.valid || lname.untouched" class="invalid-feedback">Please enter your last name</div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="fathersName" class="required-item">Father's Name</label>
+                                        <input #fathersName="ngModel" [class.is-invalid]="fathersName.invalid && fathersName.touched" [(ngModel)]="studentRegData.fathersName" type="text" name="fathersName" id="fathersName" class="form-control" required/>
+                                        <div [class.d-none]="fathersName.valid || fathersName.untouched" class="invalid-feedback">Please enter your fathers name</div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="mothersName" class="required-item">Mother's Name</label>
+                                        <input #mothersName="ngModel" [class.is-invalid]="mothersName.invalid && mothersName.touched" [(ngModel)]="studentRegData.mothersName" type="text" name="mothersName" id="mothersName" class="form-control" required/>
+                                        <div [class.d-none]="mothersName.valid || mothersName.untouched" class="invalid-feedback">Please enter your mothers name</div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="dob" class="required-item">Date Of Birth</label>
+                                        <input #dob="ngModel" [class.is-invalid]="dob.invalid && dob.touched" [(ngModel)]="studentRegData.dob" type="date" name="dob" id="dob" class="form-control" required/>
+                                        <div [class.d-none]="dob.valid || dob.untouched" class="invalid-feedback">Please enter your date of birth</div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="gender">Gender</label>
+                                        <div class="form-control border-0">
+                                            <div class="custom-control custom-radio  d-inline-block mr-2">
+                                                <input [(ngModel)]="studentRegData.gender" type="radio" class="custom-control-input" name="gender" id="male" value="male"/>
+                                                <label for="male" class="custom-control-label">Male</label>
+                                            </div>
+                                            <div class="custom-control custom-radio d-inline-block mr-2">
+                                                <input [(ngModel)]="studentRegData.gender" type="radio"  class="custom-control-input" name="gender" id="female" value="female"/>
+                                                <label for="female" class="custom-control-label">Female</label>
+                                            </div>
+                                            <div class="custom-control custom-radio  d-inline-block">
+                                                <input [(ngModel)]="studentRegData.gender" type="radio"  class="custom-control-input" name="gender" id="trans" value="trans"/>
+                                                <label for="trans" class="custom-control-label">Trans</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="nationality" class="required-item">Nationality</label>
+                                        <select #nationality="ngModel" [class.is-invalid]="nationality.invalid && nationality.touched" [(ngModel)]="studentRegData.nationality" name="nationality" id="nationality" class="form-control" required>
+                                            <option value="Select any Category">Select any Category</option>
+                                            <option value="Indian">Indian</option>
+                                            <option value="NRI">NRI</option>
+                                        </select>
+                                        <div [class.d-none]="nationality.valid || nationality.untouched" class="invalid-feedback">Please select Nationality</div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="caste" class="required-item">Caste</label>
+                                        <select #caste="ngModel" [class.is-invalid]="caste.invalid && caste.touched" [(ngModel)]="studentRegData.caste" name="caste" id="caste" class="form-control" required>
+                                            <option value="Select any Category">Select any Category</option>
+                                            <option value="UR">UR</option>
+                                            <option value="OBC">OBC</option>
+                                            <option value="SC">SC</option>
+                                            <option value="ST">ST</option>
+                                        </select>
+                                        <div [class.d-none]="caste.valid || caste.untouched" class="invalid-feedback">Please select your caste</div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="address" class="required-item">Address</label>
+                                        <input #address="ngModel" [class.is-invalid]="address.invalid && address.touched" [(ngModel)]="studentRegData.address" type="text" name="address" id="address" class="form-control" required/>
+                                        <div [class.d-none]="address.valid || address.untouched" class="invalid-feedback">Please enter your postal address</div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="city" class="required-item">City</label>
+                                        <input #city="ngModel" [class.is-invalid]="city.invalid && city.touched" [(ngModel)]="studentRegData.city" type="text" name="city" id="city" class="form-control" required/>
+                                        <div [class.d-none]="city.valid || city.untouched" class="invalid-feedback">Please enter your city</div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="state" class="required-item">State</label>
+                                        <input #state="ngModel" [class.is-invalid]="state.invalid && state.touched" [(ngModel)]="studentRegData.state" type="text" name="state" id="state" class="form-control" required/>
+                                        <div [class.d-none]="state.valid || state.untouched" class="invalid-feedback">Please enter your state</div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label  class="required-item">Passport No.</label>
+                                        <input  type="text" name="passport" id="passport" class="form-control" required/>
+                                        <div [class.d-none]="passport.valid || passport.untouched" class="invalid-feedback">Please enter your Passport No.</div>
+                                    </div>
+                                </div>
+
+
+                                <h6 class="form-caption">Academic Information</h6>
+                                <hr>
+                                
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Examination</th>
+                                            <th>Board/University</th>
+                                            <th>Subject</th>
+                                            <th>Year</th>
+                                            <th>Percentage/Grade</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="">Senior Secondary</label>
+                                                    <!-- <input #ssExam="ngModel" [(ngModel)]="studentRegData.ssExamination" type="text" name="ss-examination" id="ss-examination" class="form-control" level="ss" value="Senior Secondary" /> -->
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <input #ssBoard="ngModel" [class.is-invalid]="ssBoard.invalid && ssBoard.touched" [(ngModel)]="studentRegData.ssBoard" type="text" name="ss-board" id="ss-board" level="ss" class="form-control" required/>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <input #ssSubject="ngModel" [class.is-invalid]="ssSubject.invalid && ssSubject.touched" [(ngModel)]="studentRegData.ssSubject" type="text" name="ss-subject" id="ss-subject" level="ss" class="form-control" required/>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <input #ssYear="ngModel" [class.is-invalid]="ssYear.invalid && ssYear.touched" [(ngModel)]="studentRegData.ssYear" type="text" name="ss-year" id="ss-year" level="ss" class="form-control" required/>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <input #ssPercentage="ngModel" [class.is-invalid]="ssPercentage.invalid && ssPercentage.touched" [(ngModel)]="studentRegData.ssPercentage" type="text" name="ss-percentage" id="ss-percentage" level="ss" class="form-control" required/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="">Higher Secondary</label>
+                                                    <!-- <input [(ngModel)]="studentRegData.hsExamination" type="text" name="hs-examination" id="hs-examination" class="form-control" level="hs" value="Higher Secondary" /> -->
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <input #hsBoard="ngModel" [class.is-invalid]="hsBoard.invalid && hsBoard.touched" [(ngModel)]="studentRegData.hsBoard" type="text" name="hs-board" id="hs-board" level="hs" class="form-control" required/>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <input #hsSubject="ngModel" [class.is-invalid]="hsSubject.invalid && hsSubject.touched" [(ngModel)]="studentRegData.hsSubject" type="text" name="hs-subject" id="hs-subject" level="hs" class="form-control" required/>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <input #hsYear="ngModel" [class.is-invalid]="hsYear.invalid && hsYear.touched" [(ngModel)]="studentRegData.hsYear" type="text" name="hs-year" id="hs-year" level="hs" class="form-control" required/>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <input #hsPercentage="ngModel" [class.is-invalid]="hsPercentage.invalid && hsPercentage.touched" [(ngModel)]="studentRegData.hsPercentage" type="text" name="hs-percentage" id="hs-percentage" level="hs" class="form-control" required/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="applyFor" class="required-item">Apply For</label>
+                                        <select #applyFor="ngModel" [class.is-invalid]="applyFor.invalid && applyFor.touched" [(ngModel)]="studentRegData.applyFor" name="applyFor" id="applyFor" class="form-control" required>
+                                            <option value="Select any one course">Select any one course</option>
+                                            <option value="BA">BA</option>
+                                            <option value="BBA">BBA</option>
+                                            <option value="BCA">BCA</option>
+                                            <option value="BSC">BSC</option>
+                                            <option value="MA">MA</option>
+                                            <option value="MBA">MBA</option>
+                                            <option value="MCA">MCA</option>
+                                            <option value="MSC">MSC</option>
+                                        </select>
+                                        <div [class.d-none]="applyFor.valid || applyFor.untouched" class="invalid-feedback">Please select course</div>
+                                    </div>
+
+                                    <div class="form-group col-md-4">
+                                        <label for="stream" class="required-item">Stream</label>
+                                        <select #stream="ngModel" [class.is-invalid]="stream.invalid && stream.touched" [(ngModel)]="studentRegData.stream" name="stream" id="stream" class="form-control" required>
+                                            <option value="Select any one stream">Select any one stream</option>
+                                            <option value="Computer">Computer</option>
+                                            <option value="Maths">Maths</option>
+                                            <option value="Biotech">Biotech</option>
+                                            <option value="Physics">Physics</option>
+                                        </select>
+                                        <div [class.d-none]="stream.valid || stream.untouched" class="invalid-feedback">Please select any stream</div>
+                                    </div>
+
+                                    <div class="form-group col-md-4">
+                                        <label for="medium" class="required-item">Medium</label>
+                                        <select #medium="ngModel" [class.is-invalid]="medium.invalid && medium.touched" [(ngModel)]="studentRegData.medium" name="medium" id="medium" class="form-control" required>
+                                            <option value="Select any one medium">Select any one stream</option>
+                                            <option value="English">English</option>
+                                            <option value="Hindi">Hindi</option>
+                                        </select>
+                                        <div [class.d-none]="medium.valid || medium.untouched" class="invalid-feedback">Please select any medium</div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="centerCity" class="required-item">Center City</label>
+                                        <select #centerCity="ngModel" [class.is-invalid]="centerCity.invalid && centerCity.touched" [(ngModel)]="studentRegData.centerCity" name="centerCity" id="centerCity" class="form-control" required>
+                                            <!-- <option value="Select any one center city">Select any one center city</option>
+                                            <option value="Delhi">Delhi</option>
+                                            <option value="Agra">Agra</option>
+                                            <option value="Jaipur">Jaipur</option>
+                                            <option value="Indore">Indore</option>
+                                            <option value="Mumbai">Mumbai</option> --> 
+                                            <ng-container *ngFor="let center of centers">
+                                                <option value={{center.centerAddress}}>{{center.centerAddress}}</option>
+                                            </ng-container>
+                                        </select>
+                                        <div [class.d-none]="centerCity.valid || centerCity.untouched" class="invalid-feedback">Please select any one city</div>
+                                    </div>
+                                    <div class="form-group col-md-8">
+                                        <label for="centerName" class="required-item">Center Name</label>
+                                        <select #centerName="ngModel" [class.is-invalid]="centerName.invalid && centerName.touched" [(ngModel)]="studentRegData.centerName" name="centerName" id="centerName" class="form-control" required>
+                                            <!-- <option value="Select any one center name">Select any one center name</option>
+                                            <option value="st xavier college of science">st xavier college of science</option>
+                                            <option value="Modern college of computers">Modern college of computers</option>
+                                            <option value="Malwa institute of technology and science">Malwa institute of technology and science</option>
+                                            <option value="Christient eminent college">Christient eminent college</option>
+                                            <option value="Deli college">Deli college</option> -->
+                                            <ng-container *ngFor="let center of centers">   
+                                                <option *ngIf="center.availableSeats" value={{center.centerName}}>  {{center.centerName}} <span>{{center.availableSeats}}</span></option>
+                                            </ng-container>
+                                        </select>
+                                        <div [class.d-none]="centerName.valid || centerName.untouched" class="invalid-feedback">Please select any one center</div>
+                                    </div>
+                                </div>
+
+                                <!-- <h6 class="form-caption">Documents</h6>
+                                <hr>
+
+                                <div class="form-row">
+                                    
+                                    <div class="form-group col-md-4">
+                                        <label for="photo">Photo</label>
+                                        <div class="custom-input-file">
+                                            <input [(ngModel)]="studentRegData.photo" type="file" name="photo" id="photo" class="form-control" (change)='getFile($event)' />
+                                        </div>
+                                    </div>
+                                    
+                                </div> -->
+
+                                <div class="text-right">
+                                    <button type="submit" [disabled]="studentRegData.invalid" class="btn btn-info">Save</button>
+                                    <button (click)="nextPage()" class="btn btn-secondary ml-2">Next</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                

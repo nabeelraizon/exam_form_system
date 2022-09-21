@@ -1,0 +1,42 @@
+<div class="common-format">
+    <div class="page-wrapper mt-3 mb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="card">
+                        <div class="card-body">
+                            <form #uploadData="ngForm" (ngSubmit)="uploadFile()" action="">
+                                <h6 class="form-caption">Documents</h6>
+                                <hr>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="marksheet">Marksheet</label>
+                                        <div class="custom-input-file">
+                                            <input [(ngModel)]="fileUpload.marksheet" type="file" name="marksheet" id="marksheet" class="form-control" (change)='getFile($event)' />
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="photo">Photo</label>
+                                        <div class="custom-input-file">
+                                            <input [(ngModel)]="fileUpload.photo" type="file" name="photo" id="photo" class="form-control" (change)='getFile($event)' />
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="signature">Signature</label>
+                                        <div class="custom-input-file">
+                                            <input [(ngModel)]="fileUpload.signature" type="file" name="signature" id="signature" class="form-control" (change)='getFile($event)' />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-right mt-3">
+                                    <button type="submit" class="btn btn-info">Upload Files</button>
+                                    <button (click)="prevPage()" class="btn btn-secondary ml-2">Back</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                        

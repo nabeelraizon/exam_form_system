@@ -1,0 +1,30 @@
+export class StudentInfo {
+    fname: String;
+    mname: String;
+    lname: String;
+    fathersName: String;
+    mothersName: String;
+    dob: String;
+    gender: String;
+    nationality: String;
+    caste: String;
+    address: String;
+    city: String;
+    state: String;
+    country: String;
+    ssExamination: String;
+    ssBoard: String;
+    ssSubject: String;
+    ssYear: String;
+    ssPercentage: String;
+    hsExamination: String;
+    hsBoard: String;
+    hsSubject: String;
+    hsYear: String;
+    hsPercentage: String;
+    applyFor: String;
+    stream: String;
+    medium: String;
+    centerCity: String;
+    centerName: String;
+}

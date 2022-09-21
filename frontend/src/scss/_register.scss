@@ -1,0 +1,19 @@
+.header {
+     &_title{
+        font-size: 22px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        line-height: normal;
+        color: tomato;
+    }
+    &_description{
+        font-size: 16px;
+        text-transform: capitalize;
+        text-align: center;
+        letter-spacing: 0.4px;
+        line-height: normal;
+        color: turquoise;
+        font-weight: 700;
+    }
+}
